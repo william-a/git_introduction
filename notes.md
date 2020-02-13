@@ -6,15 +6,23 @@
 **Date End:** 00/00/2020 
 
 ## Git Basics
-To initalize a directory as a git repository, you first must type the command...
+### git init
+To initalize a directory as a git repository, type the command -
  `git init`
 
-Next, you want to add a file to that repository, this is done with the command...
+ This action only has to happen once, when a new directory is to be established as a repository.
+
+### git add
+Next, to do what is known as staging a file, type the command -
 `git add [FILE_NAME]`
 
-This should be done for each file in the directory that you want to stage. Staging a file saves the current state of the file, so that when a commit happens, it is that state of the file that is commited. You can think of this like a save button for git.
+This should be done for each file in the directory to stage. Staging a file saves the current state of the file, so that when a commit happens, it is that state of the file that is commited.
 
+### git commit
 Finally, to commit the staged changes, use the command...
 `git commit -m "MESSAGE GOES HERE"`
 
-Always commit your changes with a message. If nothing else, it helps you remember what you did
+Always commit your changes with a descriptive message.
+Once the files are commited, a new version now exists inside the repository.
+
+### git diff
