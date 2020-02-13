@@ -12,4 +12,9 @@ To initalize a directory as a git repository, you first must type the command...
 Next, you want to add a file to that repository, this is done with the command...
 `git add [FILE_NAME]`
 
-This should be done for each file in the directory that you want to stage. Staging a file saves the current state of the file, so that when a commit happens, it is that state of the file that is commited.
+This should be done for each file in the directory that you want to stage. Staging a file saves the current state of the file, so that when a commit happens, it is that state of the file that is commited. You can think of this like a save button for git.
+
+Finally, to commit the staged changes, use the command...
+`git commit -m "MESSAGE GOES HERE"`
+
+Always commit your changes with a message. If nothing else, it helps you remember what you did
