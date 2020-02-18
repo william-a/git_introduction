@@ -1,9 +1,14 @@
-# Git & GitHub Masterclass - Notes
+# Git & GitHub Masterclass - Summary
 ---
 **Course:** https://www.udemy.com/course/git-and-github-masterclass/
 **Author:** William Anderson
-**Date Start:** 02/13/2020
-**Date End:** 00/00/2020 
+**Date Created &nbsp;:** 02/13/2020
+**Date Last Rev:** 02/18/2020 
+
+**TODO:**
+Left off @ 4:15 Video #10
+
+The following notes were written for use on the Windows 10 Platform, using the Git Bash Shell under `git version 2.23.0.windows.1`
 
 ## Git Basics
 ### git init
@@ -18,11 +23,34 @@ This should be done for each file in the directory to stage. Staging a file save
 
 ### git commit
 Finally, to commit the staged changes, use the command -
-`git commit -m "MESSAGE GOES HERE"`
+`git commit -m ["MESSAGE_GOES_HERE"]`
 Always commit your changes with a descriptive message.
 Once the files are commited, a new version now exists inside the repository.
 
 ### git diff
-To see any changes that have been made since the last stage or commit, type the command -
+To see any differences between the local file and the currently staged/current version of the file, type the command - 
 `git diff [FILE_NAME]`
-By default, the currently staged file, if different from the current version's commited file, will be compared against. If there is no staged file, the current commited version of the file we be compared against. 
+By default, the currently staged file, if different from the local file, will be compared against. If there is no staged file, the local file will be compared against the current version in the repository. 
+
+## Git Configurations
+### git config --global [user<span></span>.name | user.email]
+One of the first things to do when using git is to configure the global user<span></span>.name and user.email variables. These correspond to the name and email of the author of the commit.
+
+To view the current git configuration, type the command - 
+`git command --list`
+
+If the variables are set, they should appear in the list, if not, set user<span></span>.name and user.email with the commands -
+`git config --global user.name ["NAME_GOES_HERE"]`
+`git config --global user.name [EMAIL_GOES_HERE]`
+
+### git config --global core.editor
+To configue the default editor that git uses, which is particularly useful for writing longform revisions, type the command -
+`git config --global core.editor ["EDITOR_CODE -- wait"]`
+
+The editor code is the associated shortcode for popular corresponding text editors, for example, this command sets the default git text editor to [Visual Studio Code](https://code.visualstudio.com/).
+`git config --global core.editor "code --wait"`
+
+By default, git uses the shell envrionment variable `VISUAL` or `EDITOR`, and if neither of those are set, falls back to `vi`.
+
+
+
