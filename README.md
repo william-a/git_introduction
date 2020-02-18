@@ -102,7 +102,6 @@ Assume a GitHub profile name of  `your_name_here` and a repo of `your_repo_here`
 To fix the misspelling of orggin to origin, type the commands -
 
 `git remote rm orggin`
-
 `git remote add origin https://github.com/your_name_here/your_repo_here.git`
 
 or more simply - 
@@ -122,3 +121,24 @@ To inspect a remote, type the command -
 The output will contain a list of branches associated with the remote and also the endpoints for fetching and pushing.
 
 Remoting is the stage that comes before pushing *(if a remote is not associated with the repo)*, which is the final step in publishing local changes to remote.
+
+### git push
+`git push` is used to commit the changes from local to remote. This assumes that remote has been set up previously by `git remote`. Having done so, type the command - 
+
+`git push`
+
+This will upload the local state of the branch to the remote repo specified by the remote name. To be more specific, type the command -
+
+`git push [REMOTE_NAME] [BRANCH_NAME]`
+
+This specificity allows for more fine control over different remotes and branches.
+
+### git pull
+`git pull` is the counterpart to `git push`. Where `git push` commits changes from local to remote, `git pull` returns commited changes from remote to local. To use `git pull`, type the command -
+
+`git pull`
+
+With no arguments, the default behavior is equivalent to that of `git fetch origin HEAD` and `git merge HEAD` where `HEAD` is ref pointing to the current branch.
+
+However, similar to that of `git push` for more specificity, type the command -
+`git pull [REMOTE_NAME] [BRANCH_NAME]`
