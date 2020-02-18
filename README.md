@@ -8,6 +8,8 @@
 
 **Date Last Rev:** 02/18/2020 
 
+**TODO:** On Wed./Thurs. pickup at git status, finalize section about bringing it all together, then start on branches and merging.
+
 The following notes were written for use on the Windows 10 Platform, using the Git Bash Shell under `git version 2.23.0.windows.1`
 
 ## Git Basics
