@@ -146,4 +146,4 @@ However, similar to that of `git push` for more specificity, type the command -
 This will download the current state of remote/branch and merge it with your local/branch.
 
 ### git status
-`git status` is a simple command to view which files are staged, unstaged, or untracked.
+`git status` is a simple command to view which files are staged, unstaged, or untracked. `git status` does not show any information based on commit history, for that, use `git log`
