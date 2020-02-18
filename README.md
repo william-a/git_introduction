@@ -53,7 +53,9 @@ diff is simply showing the difference (*B - A*) between the two files. It is not
 ### git config --global [user<span></span>.name | user.email]
 One of the first things to do when using git is to configure the global user<span></span>.name and user.email variables. These correspond to the name and email of the author of the commit.
 
-To view the current git configuration, type the command - `git command --list`
+To view the current git configuration, type the command - 
+
+`git command --list`
 
 If the variables are set, they should appear in the list, if not, set user<span></span>.name and user.email with the commands -
 
@@ -62,7 +64,9 @@ If the variables are set, they should appear in the list, if not, set user<span>
 `git config --global user.name [EMAIL_GOES_HERE]`
 
 ### git config --global core.editor
-To configue the default editor that git uses, which is particularly useful for writing longform revisions, type the command - `git config --global core.editor ["EDITOR_CODE -- wait"]`
+To configue the default editor that git uses, which is particularly useful for writing longform revisions, type the command -
+
+ `git config --global core.editor ["EDITOR_CODE -- wait"]`
 
 The editor code is the associated shortcode for popular corresponding text editors, for example, this command sets the default git text editor to [Visual Studio Code](https://code.visualstudio.com/).
 
@@ -75,11 +79,17 @@ This guide is written under the assumption that the user is also using GitHub in
 
 
 ### git remote
-`git remote` is a command to create, view, and delete connections to other repos. It allows for simple aliasing of otherwise verbose URLs. To add a remote, type the command - `git remote add [REMOTE_NAME] [URL]`
+`git remote` is a command to create, view, and delete connections to other repos. It allows for simple aliasing of otherwise verbose URLs. To add a remote, type the command -
 
-To remove a remote, type the command - `git remote rm [REMOTE_NAME]`
+ `git remote add [REMOTE_NAME] [URL]`
 
-To rename a remote, type the command - `git remote rename [REMOTE_OLD_NAME] [REMOTE_NEW_NAME]`
+To remove a remote, type the command - 
+
+`git remote rm [REMOTE_NAME]`
+
+To rename a remote, type the command -
+
+ `git remote rename [REMOTE_OLD_NAME] [REMOTE_NEW_NAME]`
 
 **E.g.:**
 Assume a GitHub profile name of  `your_name_here` and a repo of `your_repo_here`.
@@ -92,11 +102,17 @@ To fix the misspelling of orggin to origin, type the commands -
 
 `git remote add origin https://github.com/your_name_here/your_repo_here.git`
 
-or more simply - `git remote rename orggin origin`
+or more simply - 
 
-To show the remote connections to this repository, type the command - `git remote`
+`git remote rename orggin origin`
 
-To inspect a remote, type the command - `git remote show [REMOTE_NAME]`
+To show the remote connections to this repository, type the command - 
+
+`git remote`
+
+To inspect a remote, type the command - 
+
+`git remote show [REMOTE_NAME]`
 
 The output will contain a list of branches associated with the remote and also the endpoints for fetching and pushing.
 
