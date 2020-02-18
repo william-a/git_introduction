@@ -142,3 +142,8 @@ With no arguments, the default behavior is equivalent to that of `git fetch orig
 
 However, similar to that of `git push` for more specificity, type the command -
 `git pull [REMOTE_NAME] [BRANCH_NAME]`
+
+This will download the current state of remote/branch and merge it with your local/branch.
+
+### git status
+`git status` is a simple command to view which files are staged, unstaged, or untracked.
