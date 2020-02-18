@@ -4,13 +4,9 @@
 
 **Author:** William Anderson
 
-**Date Created &nbsp;:** 02/13/2020
+**Date Created :** 02/13/2020
 
 **Date Last Rev:** 02/18/2020 
-
-
-**TODO:**
-Left off @ 4:15 Video #10
 
 The following notes were written for use on the Windows 10 Platform, using the Git Bash Shell under `git version 2.23.0.windows.1`
 
@@ -38,9 +34,7 @@ By default, the currently staged file, if different from the local file, will be
 
 ### git diff using IDs
 To compare against different versions in the repository, you need the ID of the version to compare against. The commit ID is hashed *(SHA-1)*, and as such, will be a large hexidecimal value. 
-
 `git diff [FIRST_SEVEN_OF_ID] -p`
-
 This will show the differences between that version and the current version. 
 **NOTE:** 
 diff is simply showing the difference (*B - A*) between the two files. It is not tracing the revision chain and accounting for possible differences that exist between them, but are not reflected in either.
@@ -68,4 +62,31 @@ By default, git uses the shell envrionment variable `VISUAL` or `EDITOR`, and if
 ## Git - Local & Remote
 This guide is written under the assumption that the user is also using GitHub in conjunction with Git. If not, please follow the directions of the chosen repository, the changes to these commands should be minimal except where obvious.
 
-### git push
+
+### git remote
+`git remote` is a command to create, view, and delete connections to other repos. It allows for simple aliasing of otherwise verbose URLs. To add a remote, type the command -
+`git remote add [REMOTE_NAME] [URL]`
+
+To remove a remote, type the command -
+`git remote rm [REMOTE_NAME]`
+
+To rename a remote, type the command -
+`git remote rename [REMOTE_OLD_NAME] [REMOTE_NEW_NAME]`
+
+**E.g.:**
+Assume a GitHub profile name of  `your_name_here` and a repo of `your_repo_here`.
+`git remote add orggin https://github.com/your_name_here/your_repo_here.git`
+To fix the misspelling of orggin to origin -
+`git remote rm orggin`
+`git remote add origin https://github.com/your_name_here/your_repo_here.git`
+or more simply -
+`git remote rename orggin origin`
+
+To show the remote connections to this repository, type the command - 
+`git remote`
+
+To inspect a remote, type the command -
+`git remote show [REMOTE_NAME]`
+The output will contain a list of branches associated with the remote and also the endpoints for fetching and pushing.
+
+Remoting is the stage that comes before pushing *(if a remote is not associated with the repo)*, which is the final step in publishing local changes to remote.
