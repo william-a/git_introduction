@@ -91,8 +91,11 @@ To rename a remote, type the command -
 
  `git remote rename [REMOTE_OLD_NAME] [REMOTE_NEW_NAME]`
 
-**E.g.:**
-Assume a GitHub profile name of  `your_name_here` and a repo of `your_repo_here`.
+
+#### **E.g.:**
+---
+
+Assume a GitHub profile name of  `your_name_here` and a repo of `your_repo_here`. To add a remote to the current .git directory, type the command -
 
 `git remote add orggin https://github.com/your_name_here/your_repo_here.git`
 
@@ -105,6 +108,8 @@ To fix the misspelling of orggin to origin, type the commands -
 or more simply - 
 
 `git remote rename orggin origin`
+
+---
 
 To show the remote connections to this repository, type the command - 
 
