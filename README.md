@@ -1,9 +1,13 @@
 # Git & GitHub Masterclass - Summary
 ---
 **Course:** https://www.udemy.com/course/git-and-github-masterclass/
+
 **Author:** William Anderson
+
 **Date Created &nbsp;:** 02/13/2020
+
 **Date Last Rev:** 02/18/2020 
+
 
 **TODO:**
 Left off @ 4:15 Video #10
@@ -61,3 +65,7 @@ The editor code is the associated shortcode for popular corresponding text edito
 
 By default, git uses the shell envrionment variable `VISUAL` or `EDITOR`, and if neither of those are set, falls back to `vi`.
 
+## Git - Local & Remote
+This guide is written under the assumption that the user is also using GitHub in conjunction with Git. If not, please follow the directions of the chosen repository, the changes to these commands should be minimal except where obvious.
+
+### git push
