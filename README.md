@@ -98,19 +98,15 @@ Assume a GitHub profile name of  `your_name_here` and a repo of `your_repo_here`
 
 To fix the misspelling of orggin to origin -
 `git remote rm orggin`
-
 `git remote add origin https://github.com/your_name_here/your_repo_here.git`
 
 or more simply -
-
 `git remote rename orggin origin`
 
 To show the remote connections to this repository, type the command - 
-
 `git remote`
 
 To inspect a remote, type the command -
-
 `git remote show [REMOTE_NAME]`
 
 The output will contain a list of branches associated with the remote and also the endpoints for fetching and pushing.
