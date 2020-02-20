@@ -6,9 +6,11 @@
 
 **Date Created :** 02/13/2020
 
-**Date Last Rev:** 02/18/2020 
+**Date Last Rev:** 02/20/2020 
 
-**TODO:** On Wed./Thurs. pickup at git status, finalize section about bringing it all together, then start on branches and merging.
+**TODO: Friday -** 
+* Streamline the push/pull/status section 
+* Finish bringing it all together #1
 
 The following notes were written for use on the Windows 10 Platform, using the Git Bash Shell under `git version 2.23.0.windows.1`
 
@@ -149,3 +151,27 @@ This will download the current state of remote/branch and merge it with your loc
 
 ### git status
 `git status` is a simple command to view which files are staged, unstaged, or untracked. `git status` does not show any information based on commit history, for that, use `git log`
+
+## Git - Putting It All Together #1
+
+### Ex # 1 - Creating a local repo
+> `mkdir my_new_folder`
+> `cd my_new_folder`
+> `git init`
+
+### Ex # 2 - Adding a remote
+> `# Only needed if created locally and not cloned from GitHub`
+> `git remote add orign https://github.com/my_user_name/my_repo.git`
+> 
+### Ex # 3 - Pushing local changes to remote
+> `# After making the changes to be commited`
+> `git add README.md`
+> `git commit -m "Created README.md`
+> `git push origin master` 
+
+### Ex # 4 - Change the remote repo
+> `git remote -v`
+> `git remote rm origin`
+> `# To verify removal of old origin`
+> `git remote -v` 
+> `git remote add origin https://github.com/my_user_name/my_repo.git`
