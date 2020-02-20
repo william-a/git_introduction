@@ -164,7 +164,7 @@ This will download the current state of remote/branch and merge it with your loc
 ### Ex # 2 - Adding a remote
 > `# Only needed if created locally and not cloned from GitHub`
 > 
-> `git remote add orign https://github.com/my_user_name/my_repo.git`
+> `git remote add origin https://github.com/my_user_name/my_repo.git`
 > 
 ### Ex # 3 - Pushing local changes to remote
 > `# After making the changes to be commited`
