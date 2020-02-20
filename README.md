@@ -140,6 +140,14 @@ This will upload the local state of the branch to the remote repo specified by t
 
 This specificity allows for more fine control over different remotes and branches.
 
+
+### git fetch
+`git fetch` is used to update the history of a local repo to the state of a remote repo. To syncronize local to remote, type the command - 
+
+`git fetch origin`
+
+After fetching, local will now be informed as to its current state relative to remote. This step is typically done before a `git pull`. `git fetch` is not a merge, it is asks "What's been going on?"
+
 ### git pull
 `git pull` is the counterpart to `git push`. Where `git push` commits changes from local to remote, `git pull` returns commited changes from remote to local. To use `git pull`, type the command -
 
