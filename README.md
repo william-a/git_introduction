@@ -6,18 +6,49 @@
 
 **Date Created :** 02/13/2020
 
-**Date Last Rev:** 02/20/2020 
+**Date Last Rev:** 02/21/2020 
 
 **TODO: Friday -** 
-* Streamline the push/pull/status section (add fetch, etc..)
-* Finish bringing it all together #1
-* Watch branch section
-* (Watch merge section)
-* (Start on bringing it all together #2)
+* Streamline the push/pull/status section (add fetch, etc..) +++
+* Finish bringing it all together #1 - +++
+* Watch branch section ++
+* (Watch merge section) ++
+* (Start on bringing it all together #2) +
 
-The following notes were written for use on the Windows 10 Platform, using the Git Bash Shell under `git version 2.23.0.windows.1`
+The following notes were written for use on the Windows 10 Platform, using the Git Bash Shell under:
 
-## Git Basics
+ `git version 2.23.0.windows.1`
+
+## Git - Configuration
+Before using Git, it's important to first configure some personalized settings. A little time here can save a lot of frustration, not only for you, but also your collaborators. Some of the most important configurations are as follows:
+
+### git config --global [user<span></span>.name | user.email]
+
+Probably the most important global setting, `user.name` and `user.email` give information as to who gave a commit and how to contact them. To view the current git configuration, type the command - 
+
+`git config --list`
+
+This will show a combination of global and local configurations for the current directory. Different directories may have different configurations, such as a different `remote.origin.url` for different repositories, commonly called repos. To configure the global `user.name` and `user.email`, type the command -
+
+`git config --global user.name ["NAME_GOES_HERE"]`
+
+`git config --global user.email [EMAIL_GOES_HERE]`
+
+### git config --global core.editor
+Commonly, you will need to use a text editor with Git. It is particularly necessary when writing larger bodies of text for version management, such as a commit's changelog. To configure the default editor that git uses, type the command -
+
+ `git config --global core.editor ["EDITOR_CODE -- wait"]`
+
+Whereby the editor code is the associated shortcode for the text editor of your choice.
+For a listing of popular text editor codes, visit [Associating text editors with Git](https://help.github.com/en/github/using-git/associating-text-editors-with-git).
+
+---
+
+***PICK BACK HERE UP CHANGING THE VOICE TO YOU-IMPERATIVE***
+
+---
+
+## Git - Basic Commands
 ### git init
 To initalize a directory as a git repository, type the command -
 
@@ -55,31 +86,6 @@ To compare against different versions in the repository, you need the ID of the 
 This will show the differences between that version and the current version. 
 **NOTE:** 
 diff is simply showing the difference (*B - A*) between the two files. It is not tracing the revision chain and accounting for possible differences that exist between them, but are not reflected in either.
-
-## Git Configurations
-### git config --global [user<span></span>.name | user.email]
-One of the first things to do when using git is to configure the global user<span></span>.name and user.email variables. These correspond to the name and email of the author of the commit.
-
-To view the current git configuration, type the command - 
-
-`git command --list`
-
-If the variables are set, they should appear in the list, if not, set user<span></span>.name and user.email with the commands -
-
-`git config --global user.name ["NAME_GOES_HERE"]`
-
-`git config --global user.name [EMAIL_GOES_HERE]`
-
-### git config --global core.editor
-To configue the default editor that git uses, which is particularly useful for writing longform revisions, type the command -
-
- `git config --global core.editor ["EDITOR_CODE -- wait"]`
-
-The editor code is the associated shortcode for popular corresponding text editors, for example, this command sets the default git text editor to [Visual Studio Code](https://code.visualstudio.com/).
-
-`git config --global core.editor "code --wait"`
-
-By default, git uses the shell envrionment variable `VISUAL` or `EDITOR`, and if neither of those are set, falls back to `vi`.
 
 ## Git - Local & Remote
 This guide is written under the assumption that the user is also using GitHub in conjunction with Git. If not, please follow the directions of the chosen repository. The changes to these commands should be minimal except where obvious.
@@ -166,6 +172,7 @@ This will download the current state of remote/branch and merge it with your loc
 ## Git - Putting It All Together #1
 
 ### Ex # 1 - Creating a local repo
+This command sequence will create a local repo
 > `mkdir my_new_folder`
 > 
 > `cd my_new_folder`
@@ -173,8 +180,6 @@ This will download the current state of remote/branch and merge it with your loc
 > `git init`
 
 ### Ex # 2 - Adding a remote
-> `# Only needed if created locally and not cloned from GitHub`
-> 
 > `git remote add origin https://github.com/my_user_name/my_repo.git`
 > 
 ### Ex # 3 - Pushing local changes to remote
