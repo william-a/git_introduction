@@ -6,7 +6,7 @@
 
 **Date Created :** 02/13/2020
 
-**Date Last Rev:** 02/21/2020 
+**Date Last Rev:** 02/25/2020 
 
 **TODO: Friday -** 
 * Streamline the push/pull/status section (add fetch, etc..) +++
@@ -17,7 +17,10 @@
 
 The following notes were written for use on the Windows 10 Platform, using the Git Bash Shell under:
 
- `git version 2.23.0.windows.1`
+`git version 2.23.0.windows.1`
+
+## Git - Git Bash Shell
+### TODO
 
 ## Git - Configuration
 Before using Git, it's important to first configure some personalized settings. A little time here can save a lot of frustration, not only for you, but also your collaborators. Some of the most important configurations are as follows:
@@ -37,24 +40,33 @@ This will show a combination of global and local configurations for the current 
 ### git config --global core.editor
 Commonly, you will need to use a text editor with Git. It is particularly necessary when writing larger bodies of text for version management, such as a commit's changelog. To configure the default editor that git uses, type the command -
 
- `git config --global core.editor ["EDITOR_CODE -- wait"]`
+`git config --global core.editor ["EDITOR_CODE -- wait"]`
 
 Whereby the editor code is the associated shortcode for the text editor of your choice.
 For a listing of popular text editor codes, visit [Associating text editors with Git](https://help.github.com/en/github/using-git/associating-text-editors-with-git).
+
+## Git - Basic Commands
+Once some basic configurations are set, you're ready to begin using Git. However, before you can use it, you must first have a `.git` directory in the project folder you want Git to manage. There are two ways of doing this, one is `git init` and the other is `git clone`.
+
+### git init
+If you have an existing project that you want Git to manage, or you are the individual in your collaboratory group that is tasked with initially setting up the repo, navigate to the directory you want Git to manage, then, type the command - 
+
+`git init`
+
+`git init` does a number of actions, such as set environment variables and sets `HEAD` to the newly created master branch. `git init` is the appropriate command to use to manage a project that is not yet under the management of Git. This action only has to be done once, at the start of the project or when Git is to be used to manage an already existing **local** project.
+
+### git clone
+`git clone` is like `git init`, but for an already existing project in some centralized repo. Typically, this project is hosted on a platform like GitHub or BitBucket. `git clone` will give the individual who uses it a *working copy*. This copy contains all of the associated files for the project, as well as any configuration settings that are not specific to a local machine. To clone an existing repo, navigate to the directory to clone the repo under, and type the command -
+
+`git clone [REPO_URL]`
+
+Much like `git init`, `git clone` is typically a one time action used to initially setup a project to manage.
 
 ---
 
 ***PICK BACK HERE UP CHANGING THE VOICE TO YOU-IMPERATIVE***
 
 ---
-
-## Git - Basic Commands
-### git init
-To initalize a directory as a git repository, type the command -
-
- `git init`
-
- This action only has to happen once, when a new directory is to be established as a repository.
 
 ### git add
 Next, to do what is known as staging a file, type the command -
