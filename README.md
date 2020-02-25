@@ -8,12 +8,12 @@
 
 **Date Last Rev:** 02/25/2020 
 
-**TODO: Wed/Thurs -** 
-* Streamline the push/pull/status section (add fetch, etc..) +++
-* Finish bringing it all together #1 - +++
-* Watch branch section ++
-* (Watch merge section) ++
-* (Start on bringing it all together #2) +
+**TODO: Week of 02/23/2020 -** 
+* Reword document in you-imperative style {[+][+][][][]}
+* Git - Basics {[+][+][+][][]} 
+* Git - Adv. {[+][][][][]}
+* Bringing it all together #1 - {[+][+][][][]}
+* Bringing it all together #2 {[][][][][]}
 
 The following notes were written for use on the Windows 10 Platform, using the Git Bash Shell under:
 
