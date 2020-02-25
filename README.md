@@ -8,7 +8,7 @@
 
 **Date Last Rev:** 02/25/2020 
 
-**TODO: Friday -** 
+**TODO: Wed/Thurs -** 
 * Streamline the push/pull/status section (add fetch, etc..) +++
 * Finish bringing it all together #1 - +++
 * Watch branch section ++
@@ -195,7 +195,7 @@ This command sequence will create a local repo
 > `git remote add origin https://github.com/my_user_name/my_repo.git`
 > 
 ### Ex # 3 - Pushing local changes to remote
-> `# After making the changes to be commited`
+> `# After making the changes to be committed`
 > 
 > `git add README.md`
 > 
@@ -213,3 +213,25 @@ This command sequence will create a local repo
 > `git remote -v` 
 > 
 > `git remote add origin https://github.com/my_user_name/my_repo.git`
+
+
+
+### BRANCH NOTES
+Currently, only experienced with the Master branch.
+
+Branches solve the problem, how can we safely and stably add new code.
+
+We could create another branch, such as `test` to deploy and test new changes to code before pushing them into the master branch, where they would be "live".
+
+Another example could be a `dev` branch, where new features are developed before being sent to a `test` branch.
+
+One thing branches allow for is a hierarchy for code changes to fall through, with each stage covering a different requirement.
+
+The idea of branching extends further, and within each branch. For example, in the `dev` branch we may yet have even more branches, which tackle a specific function within a development process. Such as a branch for adding a very specific feature, or a branch for solving a particular bug. Then, once completed, these changes can be finalized and **MERGED** into the dev branch.
+
+So, putting it all together. in the [master,test,dev] branch framework. Master typically only receives merges from test, test may have a few branches itself, but mostly it also only receives merges from dev. dev would be a branch that has multiple sub-branches where different features and bugs are being tackled.
+
+Typically, smaller sub-branches, like feature or bug-fixing branches are deleted after being merged into their parent branch.
+
+GitHub branches are known as pull requests
+
