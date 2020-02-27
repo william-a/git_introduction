@@ -8,12 +8,13 @@
 
 **Date Last Rev:** 02/25/2020 
 
+<!--  ✅🔲  -->
 **TODO: Week of 02/23/2020 -** 
-* Reword document in you-imperative style {[+][+][][][]}
-* Git - Basics {[+][+][+][][]} 
-* Git - Adv. {[+][][][][]}
-* Bringing it all together #1 - {[+][+][][][]}
-* Bringing it all together #2 {[][][][][]}
+- [ ] Reword document in you-imperative style ✅✅🔲🔲🔲
+- [ ] Git - Basics ✅✅✅🔲🔲
+- [ ] Git - Adv. ✅🔲🔲🔲🔲
+- [ ] Bringing it all together #1 - ✅✅🔲🔲🔲
+- [ ] Bringing it all together #2 🔲🔲🔲🔲🔲
 
 The following notes were written for use on the Windows 10 Platform, using the Git Bash Shell under:
 
