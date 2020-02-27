@@ -10,18 +10,20 @@
 
 <!--  ✅🔲  -->
 **TODO: Week of 02/23/2020 -** 
-- [ ] Reword document in you-imperative style ✅✅🔲🔲🔲
-- [ ] Git - Basics ✅✅✅🔲🔲
-- [ ] Git - Adv. ✅🔲🔲🔲🔲
+- [ ] Reword document in you-imperative style - ✅✅🔲🔲🔲
+- [ ] Git - Basics - ✅✅✅🔲🔲
+- [ ] Git - Adv. - ✅🔲🔲🔲🔲
 - [ ] Bringing it all together #1 - ✅✅🔲🔲🔲
-- [ ] Bringing it all together #2 🔲🔲🔲🔲🔲
+- [ ] Bringing it all together #2 - 🔲🔲🔲🔲🔲         
+
+
+
 
 The following notes were written for use on the Windows 10 Platform, using the Git Bash Shell under:
 
 `git version 2.23.0.windows.1`
 
 ## Git - Git Bash Shell
-### TODO
 
 ## Git - Configuration
 Before using Git, it's important to first configure some personalized settings. A little time here can save a lot of frustration, not only for you, but also your collaborators. Some of the most important configurations are as follows:
@@ -74,7 +76,7 @@ Next, to do what is known as staging a file, type the command -
 
 `git add [FILE_NAME]`
 
-This should be done for each file in the directory to stage. Staging a file saves the current state of the file, so that when a commit happens, it is that state of the file that is commited.
+This should be done for each file in the directory to stage. Staging a file saves the current state of the file, so that when a commit happens, it is that state of the file that is committed.
 
 ### git commit
 Finally, to commit the staged changes, use the command -
@@ -82,7 +84,7 @@ Finally, to commit the staged changes, use the command -
 `git commit -m ["MESSAGE_GOES_HERE"]`
 
 Always commit your changes with a descriptive message.
-Once the files are commited, a new version now exists inside the repository.
+Once the files are committed, a new version now exists inside the repository.
 
 ### git diff
 To see any differences between the local file and the currently staged/current version of the file, type the command - 
@@ -92,7 +94,7 @@ To see any differences between the local file and the currently staged/current v
 By default, the currently staged file, if different from the local file, will be compared against. If there is no staged file, the local file will be compared against the current version in the repository. 
 
 ### git diff using IDs
-To compare against different versions in the repository, you need the ID of the version to compare against. The commit ID is hashed *(SHA-1)*, and as such, will be a large hexidecimal value. 
+To compare against different versions in the repository, you need the ID of the version to compare against. The commit ID is hashed *(SHA-1)*, and as such, will be a large hexadecimal value. 
 
 `git diff [FIRST_SEVEN_OF_ID] -p`
 
@@ -161,14 +163,14 @@ This specificity allows for more fine control over different remotes and branche
 
 
 ### git fetch
-`git fetch` is used to update the history of a local repo to the state of a remote repo. To syncronize local to remote, type the command - 
+`git fetch` is used to update the history of a local repo to the state of a remote repo. To synchronize local to remote, type the command - 
 
 `git fetch origin`
 
 After fetching, local will now be informed as to its current state relative to remote. This step is typically done before a `git pull`. `git fetch` is not a merge, it is asks "What's been going on?"
 
 ### git pull
-`git pull` is the counterpart to `git push`. Where `git push` commits changes from local to remote, `git pull` returns commited changes from remote to local. To use `git pull`, type the command -
+`git pull` is the counterpart to `git push`. Where `git push` commits changes from local to remote, `git pull` returns committed changes from remote to local. To use `git pull`, type the command -
 
 `git pull`
 
@@ -180,40 +182,39 @@ However, similar to that of `git push` for more specificity, type the command -
 This will download the current state of remote/branch and merge it with your local/branch.
 
 ### git status
-`git status` is a simple command to view which files are staged, unstaged, or untracked. `git status` does not show any information based on commit history, for that, use `git log`
+`git status` is a simple command to view which files are staged, un-staged, or un-tracked. `git status` does not show any information based on commit history, for that, use `git log`
 
 ## Git - Putting It All Together #1
 
 ### Ex # 1 - Creating a local repo
 This command sequence will create a local repo
-> `mkdir my_new_folder`
-> 
-> `cd my_new_folder`
-> 
-> `git init`
+```
+> mkdir my_new_folder
+> cd my_new_folder
+> git init
+```
 
 ### Ex # 2 - Adding a remote
-> `git remote add origin https://github.com/my_user_name/my_repo.git`
-> 
+```
+> git remote add origin https://github.com/my_user_name/my_repo.git
+```
+
 ### Ex # 3 - Pushing local changes to remote
-> `# After making the changes to be committed`
-> 
-> `git add README.md`
-> 
-> `git commit -m "Created README.md`
-> 
-> `git push origin master` 
+```
+# After making the changes to be committed
+> git add README.md
+> git commit -m "Created README.md
+> git push origin master
+```
 
 ### Ex # 4 - Change the remote repo
-> `git remote -v`
-> 
-> `git remote rm origin`
-> 
-> `# To verify removal of old origin`
-> 
-> `git remote -v` 
-> 
-> `git remote add origin https://github.com/my_user_name/my_repo.git`
+```
+> git remote -v
+> git remote rm origin
+# To verify removal of old origin
+> git remote -v
+> git remote add origin https://github.com/my_user_name/my_repo.git
+```
 
 
 
