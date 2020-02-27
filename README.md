@@ -130,6 +130,7 @@ Assume a GitHub profile name of  `your_name_here` and a repo of `your_repo_here`
 To fix the misspelling of orggin to origin, type the commands -
 
 `git remote rm orggin`
+
 `git remote add origin https://github.com/your_name_here/your_repo_here.git`
 
 or more simply - 
@@ -188,7 +189,7 @@ This will download the current state of remote/branch and merge it with your loc
 
 ### Ex # 1 - Creating a local repo
 This command sequence will create a local repo
-```
+``` git
 > mkdir my_new_folder
 > cd my_new_folder
 > git init
