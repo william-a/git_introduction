@@ -1,4 +1,4 @@
-# Git & GitHub Masterclass
+# Git & GitHub - An Introduction
 **Author:** William Anderson
 
 **Date Created :** 02/13/2020
