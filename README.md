@@ -9,8 +9,9 @@
 <!--  ✅🔲  -->
 ### **Working Objective List:**
 ####  **Week of 03/01/2020**
-- [X] Git - Configuration - ✅✅✅✅✅
-- [ ] Git - Basics - ✅✅🔲🔲🔲
+- [X] Git - Global Configurations - ✅✅✅
+- [x] Git - Repository Initialization  - ✅✅
+- [ ] Git - Basics - 🔲🔲🔲
 - [ ] Git - Adv. - ✅🔲🔲🔲🔲
 - [ ] Bringing it all together #1 - ✅✅🔲🔲🔲
 - [ ] Bringing it all together #2 - 🔲🔲🔲🔲🔲   
@@ -21,12 +22,14 @@ The following notes were written for use on the Windows 10 Platform, using the G
 
 `git version 2.23.0.windows.1`
 
-## 1.1. Git - Git Bash Shell
+## Git - Git Bash Shell
 
-## 1.2. Git - Configuration
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+
+## Git - Global Configurations
 Before using Git, it's important to first configure some personalized settings. A little time here can save a lot of frustration, not only for you, but also your collaborators. Some of the most important configurations are as follows:
 
-### 1.2.1. git config --list
+### git config --list
 If you ever want to check your current configuration settings, type the command -
 
 ```
@@ -35,7 +38,7 @@ git config --list
 
 This will show you the current configuration relative to the directory you're in. If the directory does not contain a `.git` sub-directory, then it will show you your global Git settings. If you are in a directory with a `.git` sub-directory, then it will also show any settings specific to that repo, such as the location of `remote.origin.url`.
 
-### 1.2.2. git config --global [user<span></span>.name | user.email]
+### git config --global [user<span></span>.name | user.email]
 
 Probably the most important global settings, `user.name` and `user.email` is your identity to your collaborators. This information is immutably baked into commits and is important for being able to trace commit history through a single collaborator, as well as contact them. To set these global variables, type the command -
 
@@ -46,26 +49,28 @@ git config --global user.email [EMAIL_GOES_HERE]
 
 If you want to mask the global setting for an individual project, remove the `--global` argument when in that project's directory and it will create a local value for it. This masking is also supported for various other global settings.
 
-### 1.2.3. git config --global core.editor
+### git config --global core.editor
 Commonly, you will need to use a text editor with Git. It is particularly necessary when writing larger bodies of text for version management, such as a commit's changelog. To configure the default editor that Git uses, type the command -
 
-`git config --global core.editor ["EDITOR_CODE" | "EDITOR_PATH"]`
+```
+git config --global core.editor ["EDITOR_CODE" | "EDITOR_PATH"]
+```
 
 Whereby the editor code is the associated shortcode for the text editor of your choice.
 For a listing of popular text editor codes, visit [Associating text editors with Git](https://help.github.com/en/github/using-git/associating-text-editors-with-git).
 
-## 1.3. Git - Basic Commands
+## Git - Repositories
 Once some basic configurations are set, you're ready to begin using Git. However, before you can use it, you must first have a `.git` directory in the project folder you want Git to manage. There are two ways of doing this, one is `git init` and the other is `git clone`.
 
-### 1.3.1. git init
-If you have an existing project that you want Git to manage, or you are the individual in your collaboratory group that is tasked with initially setting up the repo, navigate to the directory you want Git to manage, then, type the command - 
+### git init
+If you have an existing project that you want Git to manage, navigate to the project directory and type the command - 
 
 `git init`
 
 `git init` does a number of actions, such as set environment variables and sets `HEAD` to the newly created master branch. `git init` is the appropriate command to use to manage a project that is not yet under the management of Git. This action only has to be done once, at the start of the project or when Git is to be used to manage an already existing **local** project.
 
-### 1.3.2. git clone
-`git clone` is like `git init`, but for an already existing project in some centralized repo. Typically, this project is hosted on a platform like GitHub or BitBucket. `git clone` will give the individual who uses it a *working copy*. This copy contains all of the associated files for the project, as well as any configuration settings that are not specific to a local machine. To clone an existing repo, navigate to the directory to clone the repo under, and type the command -
+### git clone
+`git clone` is like `git init`, but for an already existing project under the supervision of Git. Typically, this project is hosted on a platform like GitHub or BitBucket. `git clone` will get the individual who uses it a *working copy*. This copy contains all of the associated files for the project, as well as any configuration settings that are not specific to a local machine. To clone an existing repo, navigate to the directory to clone the repo under, and type the command -
 
 `git clone [REPO_URL]`
 
@@ -76,6 +81,8 @@ Much like `git init`, `git clone` is typically a one time action used to initial
 ***PICK BACK HERE UP CHANGING THE VOICE TO YOU-IMPERATIVE***
 
 ---
+
+## Git - Basics
 
 ### 1.3.3. git add
 Next, to do what is known as staging a file, type the command -
