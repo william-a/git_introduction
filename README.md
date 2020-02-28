@@ -11,9 +11,9 @@
 ####  **Week of 03/01/2020**
 - [X] Git - Global Configurations - ✅✅✅
 - [x] Git - Repository Initialization  - ✅✅
-- [ ] Git - Basics - 🔲🔲🔲
-- [ ] Git - Adv. - ✅🔲🔲🔲🔲
-- [ ] Bringing it all together #1 - ✅✅🔲🔲🔲
+- [ ] Git - Basics - ✅🔲🔲🔲
+- [ ] Git - Adv. - 🔲🔲🔲🔲🔲
+- [ ] Bringing it all together #1 - 🔲🔲🔲🔲🔲
 - [ ] Bringing it all together #2 - 🔲🔲🔲🔲🔲   
 
 
@@ -80,21 +80,31 @@ git clone [REPO_URL]
 
 Much like `git init`, `git clone` is typically a one time action used to initially setup a project to manage.
 
----
-
-***PICK BACK HERE UP CHANGING THE VOICE TO YOU-IMPERATIVE***
-
----
-
 ## Git - Basics
 Git has a simplistic working schema for the single user. `add`, `commit`, and `push` compose most the vast majority of actions you would need to perform. For collaborators, other commands exist, such as `merge` and `rebase` to deal with the inevitable conflicts that arise from multiple people working on one file/project. This initial section will cover the workflow under the guise of a single user, both from a single and multiple devices.
 
-### 1.3.3. git add
-Next, to do what is known as staging a file, type the command -
+### git add
+By default, Git does not automatically track all files in the directory it supervises. If you want to track the history of a file, you have to add that file. To add a file for Git to track, type the command -
 
-`git add [FILE_NAME]`
+```
+git add [FILE_NAME]
+```
 
-This should be done for each file in the directory to stage. Staging a file saves the current state of the file, so that when a commit happens, it is that state of the file that is committed.
+You have to add each file you want to track. If you want to track all files, you can type the command -
+
+```
+git add .
+```
+
+`git add` works by tracking the state of the file at the time of its addition. That is to say, it only sees what the file looks like up to that point, and no further. Any modifications made to the file after the `git add` command is issued will not be tracked. 
+
+### git reset
+
+---
+
+***PICK BACK UP HERE***
+
+---
 
 ### 1.3.4. git commit
 Finally, to commit the staged changes, use the command -
