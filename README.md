@@ -65,14 +65,18 @@ Once some basic configurations are set, you're ready to begin using Git. However
 ### git init
 If you have an existing project that you want Git to manage, navigate to the project directory and type the command - 
 
-`git init`
+```
+git init
+```
 
 `git init` does a number of actions, such as set environment variables and sets `HEAD` to the newly created master branch. `git init` is the appropriate command to use to manage a project that is not yet under the management of Git. This action only has to be done once, at the start of the project or when Git is to be used to manage an already existing **local** project.
 
 ### git clone
 `git clone` is like `git init`, but for an already existing project under the supervision of Git. Typically, this project is hosted on a platform like GitHub or BitBucket. `git clone` will get the individual who uses it a *working copy*. This copy contains all of the associated files for the project, as well as any configuration settings that are not specific to a local machine. To clone an existing repo, navigate to the directory to clone the repo under, and type the command -
 
-`git clone [REPO_URL]`
+```
+git clone [REPO_URL]
+```
 
 Much like `git init`, `git clone` is typically a one time action used to initially setup a project to manage.
 
@@ -83,6 +87,7 @@ Much like `git init`, `git clone` is typically a one time action used to initial
 ---
 
 ## Git - Basics
+Git has a simplistic working schema for the single user. `add`, `commit`, and `push` compose most the vast majority of actions you would need to perform. For collaborators, other commands exist, such as `merge` and `rebase` to deal with the inevitable conflicts that arise from multiple people working on one file/project. This initial section will cover the workflow under the guise of a single user, both from a single and multiple devices.
 
 ### 1.3.3. git add
 Next, to do what is known as staging a file, type the command -
