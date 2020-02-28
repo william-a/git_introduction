@@ -1,21 +1,19 @@
-# Git & GitHub Masterclass - Summary
----
-**Course:** https://www.udemy.com/course/git-and-github-masterclass/
-
+# Git & GitHub Masterclass
 **Author:** William Anderson
 
 **Date Created :** 02/13/2020
 
-**Date Last Rev:** 02/25/2020 
+**Date Last Rev:** 02/28/2020 
 
+---
 <!--  ✅🔲  -->
-**TODO: Week of 02/23/2020 -** 
-- [ ] Reword document in you-imperative style - ✅✅🔲🔲🔲
-- [ ] Git - Basics - ✅✅✅🔲🔲
+### **Working Objective List:**
+####  **Week of 03/01/2020**
+- [X] Git - Configuration - ✅✅✅✅✅
+- [ ] Git - Basics - ✅🔲🔲🔲🔲
 - [ ] Git - Adv. - ✅🔲🔲🔲🔲
 - [ ] Bringing it all together #1 - ✅✅🔲🔲🔲
-- [ ] Bringing it all together #2 - 🔲🔲🔲🔲🔲         
-
+- [ ] Bringing it all together #2 - 🔲🔲🔲🔲🔲   
 
 
 
@@ -23,42 +21,50 @@ The following notes were written for use on the Windows 10 Platform, using the G
 
 `git version 2.23.0.windows.1`
 
-## Git - Git Bash Shell
+## 1.1. Git - Git Bash Shell
 
-## Git - Configuration
+## 1.2. Git - Configuration
 Before using Git, it's important to first configure some personalized settings. A little time here can save a lot of frustration, not only for you, but also your collaborators. Some of the most important configurations are as follows:
 
-### git config --global [user<span></span>.name | user.email]
+### 1.2.1. git config --list
+If you ever want to check your current configuration settings, type the command -
 
-Probably the most important global setting, `user.name` and `user.email` give information as to who gave a commit and how to contact them. To view the current git configuration, type the command - 
+```
+git config --list
+```
 
-`git config --list`
+This will show you the current configuration relative to the directory you're in. If the directory does not contain a `.git` sub-directory, then it will show you your global Git settings. If you are in a directory with a `.git` sub-directory, then it will also show any settings specific to that repo, such as the location of `remote.origin.url`.
 
-This will show a combination of global and local configurations for the current directory. Different directories may have different configurations, such as a different `remote.origin.url` for different repositories, commonly called repos. To configure the global `user.name` and `user.email`, type the command -
+### 1.2.2. git config --global [user<span></span>.name | user.email]
 
-`git config --global user.name ["NAME_GOES_HERE"]`
+Probably the most important global settings, `user.name` and `user.email` is your identity to your collaborators. This information is immutably baked into commits and is important for being able to trace commit history through a single collaborator, as well as contact them. To set these global variables, type the command -
 
-`git config --global user.email [EMAIL_GOES_HERE]`
+```
+git config --global user.name ["NAME_GOES_HERE"]
+git config --global user.email [EMAIL_GOES_HERE]
+```
 
-### git config --global core.editor
-Commonly, you will need to use a text editor with Git. It is particularly necessary when writing larger bodies of text for version management, such as a commit's changelog. To configure the default editor that git uses, type the command -
+If you want to mask the global setting for an individual project, remove the `--global` argument when in that project's directory and it will create a local value for it. This masking is also supported for various other global settings.
 
-`git config --global core.editor ["EDITOR_CODE -- wait"]`
+### 1.2.3. git config --global core.editor
+Commonly, you will need to use a text editor with Git. It is particularly necessary when writing larger bodies of text for version management, such as a commit's changelog. To configure the default editor that Git uses, type the command -
+
+`git config --global core.editor ["EDITOR_CODE" | "EDITOR_PATH"]`
 
 Whereby the editor code is the associated shortcode for the text editor of your choice.
 For a listing of popular text editor codes, visit [Associating text editors with Git](https://help.github.com/en/github/using-git/associating-text-editors-with-git).
 
-## Git - Basic Commands
+## 1.3. Git - Basic Commands
 Once some basic configurations are set, you're ready to begin using Git. However, before you can use it, you must first have a `.git` directory in the project folder you want Git to manage. There are two ways of doing this, one is `git init` and the other is `git clone`.
 
-### git init
+### 1.3.1. git init
 If you have an existing project that you want Git to manage, or you are the individual in your collaboratory group that is tasked with initially setting up the repo, navigate to the directory you want Git to manage, then, type the command - 
 
 `git init`
 
 `git init` does a number of actions, such as set environment variables and sets `HEAD` to the newly created master branch. `git init` is the appropriate command to use to manage a project that is not yet under the management of Git. This action only has to be done once, at the start of the project or when Git is to be used to manage an already existing **local** project.
 
-### git clone
+### 1.3.2. git clone
 `git clone` is like `git init`, but for an already existing project in some centralized repo. Typically, this project is hosted on a platform like GitHub or BitBucket. `git clone` will give the individual who uses it a *working copy*. This copy contains all of the associated files for the project, as well as any configuration settings that are not specific to a local machine. To clone an existing repo, navigate to the directory to clone the repo under, and type the command -
 
 `git clone [REPO_URL]`
@@ -71,14 +77,14 @@ Much like `git init`, `git clone` is typically a one time action used to initial
 
 ---
 
-### git add
+### 1.3.3. git add
 Next, to do what is known as staging a file, type the command -
 
 `git add [FILE_NAME]`
 
 This should be done for each file in the directory to stage. Staging a file saves the current state of the file, so that when a commit happens, it is that state of the file that is committed.
 
-### git commit
+### 1.3.4. git commit
 Finally, to commit the staged changes, use the command -
 
 `git commit -m ["MESSAGE_GOES_HERE"]`
@@ -86,14 +92,14 @@ Finally, to commit the staged changes, use the command -
 Always commit your changes with a descriptive message.
 Once the files are committed, a new version now exists inside the repository.
 
-### git diff
+### 1.3.5. git diff
 To see any differences between the local file and the currently staged/current version of the file, type the command - 
 
 `git diff [FILE_NAME]`
 
 By default, the currently staged file, if different from the local file, will be compared against. If there is no staged file, the local file will be compared against the current version in the repository. 
 
-### git diff using IDs
+### 1.3.6. git diff using IDs
 To compare against different versions in the repository, you need the ID of the version to compare against. The commit ID is hashed *(SHA-1)*, and as such, will be a large hexadecimal value. 
 
 `git diff [FIRST_SEVEN_OF_ID] -p`
@@ -102,11 +108,11 @@ This will show the differences between that version and the current version.
 **NOTE:** 
 diff is simply showing the difference (*B - A*) between the two files. It is not tracing the revision chain and accounting for possible differences that exist between them, but are not reflected in either.
 
-## Git - Local & Remote
+## 1.4. Git - Local & Remote
 This guide is written under the assumption that the user is also using GitHub in conjunction with Git. If not, please follow the directions of the chosen repository. The changes to these commands should be minimal except where obvious.
 
 
-### git remote
+### 1.4.1. git remote
 `git remote` is a command to create, view, and delete connections to other repos. It allows for simple aliasing of otherwise verbose URLs. To add a remote, type the command -
 
  `git remote add [REMOTE_NAME] [URL]`
@@ -120,7 +126,7 @@ To rename a remote, type the command -
  `git remote rename [REMOTE_OLD_NAME] [REMOTE_NEW_NAME]`
 
 
-#### **E.g.:**
+#### 1.4.1.1. **E.g.:**
 ---
 
 Assume a GitHub profile name of  `your_name_here` and a repo of `your_repo_here`. To add a remote to the current .git directory, type the command -
@@ -151,7 +157,7 @@ The output will contain a list of branches associated with the remote and also t
 
 Remoting is the stage that comes before pushing *(if a remote is not associated with the repo)*, which is the final step in publishing local changes to remote.
 
-### git push
+### 1.4.2. git push
 `git push` is used to commit the changes from local to remote. This assumes that remote has been set up previously by `git remote`. Having done so, type the command - 
 
 `git push`
@@ -163,14 +169,14 @@ This will upload the local state of the branch to the remote repo specified by t
 This specificity allows for more fine control over different remotes and branches.
 
 
-### git fetch
+### 1.4.3. git fetch
 `git fetch` is used to update the history of a local repo to the state of a remote repo. To synchronize local to remote, type the command - 
 
 `git fetch origin`
 
 After fetching, local will now be informed as to its current state relative to remote. This step is typically done before a `git pull`. `git fetch` is not a merge, it is asks "What's been going on?"
 
-### git pull
+### 1.4.4. git pull
 `git pull` is the counterpart to `git push`. Where `git push` commits changes from local to remote, `git pull` returns committed changes from remote to local. To use `git pull`, type the command -
 
 `git pull`
@@ -182,12 +188,12 @@ However, similar to that of `git push` for more specificity, type the command -
 
 This will download the current state of remote/branch and merge it with your local/branch.
 
-### git status
+### 1.4.5. git status
 `git status` is a simple command to view which files are staged, un-staged, or un-tracked. `git status` does not show any information based on commit history, for that, use `git log`
 
-## Git - Putting It All Together #1
+## 1.5. Git - Putting It All Together #1
 
-### Ex # 1 - Creating a local repo
+### 1.5.1. Ex # 1 - Creating a local repo
 This command sequence will create a local repo
 ``` git
 > mkdir my_new_folder
@@ -195,12 +201,12 @@ This command sequence will create a local repo
 > git init
 ```
 
-### Ex # 2 - Adding a remote
+### 1.5.2. Ex # 2 - Adding a remote
 ```
 > git remote add origin https://github.com/my_user_name/my_repo.git
 ```
 
-### Ex # 3 - Pushing local changes to remote
+### 1.5.3. Ex # 3 - Pushing local changes to remote
 ```
 # After making the changes to be committed
 > git add README.md
@@ -208,7 +214,7 @@ This command sequence will create a local repo
 > git push origin master
 ```
 
-### Ex # 4 - Change the remote repo
+### 1.5.4. Ex # 4 - Change the remote repo
 ```
 > git remote -v
 > git remote rm origin
@@ -219,7 +225,7 @@ This command sequence will create a local repo
 
 
 
-### BRANCH NOTES
+### 1.5.5. BRANCH NOTES
 Currently, only experienced with the Master branch.
 
 Branches solve the problem, how can we safely and stably add new code.
