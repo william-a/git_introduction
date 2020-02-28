@@ -10,7 +10,7 @@
 ### **Working Objective List:**
 ####  **Week of 03/01/2020**
 - [X] Git - Configuration - ✅✅✅✅✅
-- [ ] Git - Basics - ✅🔲🔲🔲🔲
+- [ ] Git - Basics - ✅✅🔲🔲🔲
 - [ ] Git - Adv. - ✅🔲🔲🔲🔲
 - [ ] Bringing it all together #1 - ✅✅🔲🔲🔲
 - [ ] Bringing it all together #2 - 🔲🔲🔲🔲🔲   
