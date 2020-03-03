@@ -11,7 +11,8 @@
 ####  **Week of 03/01/2020**
 - [X] Git - Global Configurations - ✅✅✅
 - [x] Git - Repository Initialization  - ✅✅
-- [ ] Git - Basics - ✅🔲🔲🔲
+- [ ] Git - Basics: - ✅✅✅
+- [ ] Git - Basics [R,S] - 🔲🔲🔲🔲
 - [ ] Git - Adv. - 🔲🔲🔲🔲🔲
 - [ ] Bringing it all together #1 - 🔲🔲🔲🔲🔲
 - [ ] Bringing it all together #2 - 🔲🔲🔲🔲🔲   
@@ -80,8 +81,9 @@ git clone [REPO_URL]
 
 Much like `git init`, `git clone` is typically a one time action used to initially setup a project to manage.
 
-## Git - Basics: [Local, Single User]
-Git has a simplistic working schema for the single user. `add`, `commit`, and `push` compose most the vast majority of actions you would need to perform. For collaborators, other commands exist, such as `merge` and `rebase` to deal with the inevitable conflicts that arise from multiple people working on one file/project. This initial section will cover the workflow under the guise of a single-user on a singular device. Later sections will expand upon this and encompass the scope of the development process.
+## Git - Basics: 
+Git has a simplistic working schema for the single user. `add`, `commit`, and `push` compose most the vast majority of actions you will need to perform. For collaborators, other commands exist, such as `merge` and `rebase` to deal with the inevitable conflicts that arise from multiple people working on one file/project. This initial section will cover the workflow under the guise of a single-user on a singular device. Later sections will expand upon this and encompass the scope of the development process.
+
 ### git add
 By default, Git does not automatically track all files in the directory it supervises. If you want to track the history of a file, you have to add that file. To add a file for Git to track, type the command -
 
@@ -98,7 +100,7 @@ git add .
 `git add` works by tracking the state of the file at the time of its addition. That is to say, it only sees what the file looks like up to that point, and no further. Any modifications made to the file after the `git add` command is issued will not be tracked. 
 
 ### 1.3.4. git commit
-Finally, to commit the staged changes, use the command -
+After adding the files, they are indexed as a set of changes to be made, but haven't yet been "saved". To "save" the current state of the project and generate a referenceable object, you need to commit those changes. To do so, type the command - 
 
 `git commit -m ["MESSAGE_GOES_HERE"]`
 
