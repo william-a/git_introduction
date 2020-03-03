@@ -80,9 +80,8 @@ git clone [REPO_URL]
 
 Much like `git init`, `git clone` is typically a one time action used to initially setup a project to manage.
 
-## Git - Basics
-Git has a simplistic working schema for the single user. `add`, `commit`, and `push` compose most the vast majority of actions you would need to perform. For collaborators, other commands exist, such as `merge` and `rebase` to deal with the inevitable conflicts that arise from multiple people working on one file/project. This initial section will cover the workflow under the guise of a single user, both from a single and multiple devices.
-
+## Git - Basics: [Local, Single User]
+Git has a simplistic working schema for the single user. `add`, `commit`, and `push` compose most the vast majority of actions you would need to perform. For collaborators, other commands exist, such as `merge` and `rebase` to deal with the inevitable conflicts that arise from multiple people working on one file/project. This initial section will cover the workflow under the guise of a single-user on a singular device. Later sections will expand upon this and encompass the scope of the development process.
 ### git add
 By default, Git does not automatically track all files in the directory it supervises. If you want to track the history of a file, you have to add that file. To add a file for Git to track, type the command -
 
@@ -98,14 +97,6 @@ git add .
 
 `git add` works by tracking the state of the file at the time of its addition. That is to say, it only sees what the file looks like up to that point, and no further. Any modifications made to the file after the `git add` command is issued will not be tracked. 
 
-### git reset
-
----
-
-***PICK BACK UP HERE***
-
----
-
 ### 1.3.4. git commit
 Finally, to commit the staged changes, use the command -
 
@@ -113,6 +104,24 @@ Finally, to commit the staged changes, use the command -
 
 Always commit your changes with a descriptive message.
 Once the files are committed, a new version now exists inside the repository.
+
+
+## END #1
+
+### git reset
+
+If `git add` stages your files, then `git reset` will un-stage them for you. There is quite a bit more going on under the hood with `git reset`, such as the ability to operate on the multiple management mechanisms Git (Commit Tree, Staging Index, Working Directory), but for the purposes of this simple use case, think of it as your un-staging tool.
+
+To un-stage a file at the current commit, type the command -
+
+```
+git reset [FILE_NAME]
+```
+Similarly to add, you can un-stage all files by typing the command -
+```
+git reset
+```
+---
 
 ### 1.3.5. git diff
 To see any differences between the local file and the currently staged/current version of the file, type the command - 
