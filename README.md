@@ -9,13 +9,16 @@
 <!--  ✅🔲  -->
 ### **Working Objective List:**
 ####  **Week of 03/01/2020**
+- [ ] Git - Git Bash Shell - 🔲
 - [X] Git - Global Configurations - ✅✅✅
-- [x] Git - Repository Initialization  - ✅✅
-- [ ] Git - Basics: - ✅✅✅
-- [ ] Git - Basics [R,S] - 🔲🔲🔲🔲
-- [ ] Git - Adv. - 🔲🔲🔲🔲🔲
-- [ ] Bringing it all together #1 - 🔲🔲🔲🔲🔲
-- [ ] Bringing it all together #2 - 🔲🔲🔲🔲🔲   
+- [X] Git - Repository Initialization  - ✅✅
+- [X] Git - Basics: - ✅✅✅
+- [ ] Git - Workflow - Basic Case: 🔲
+- [ ] Git - Intermediary - 🔲🔲🔲🔲
+- [ ] Git - Workflow - Intermediary Case: 🔲
+- [ ] Git - Advanced - 🔲🔲🔲🔲🔲
+- [ ] Git - Workflow - Advanced Case: 🔲
+- [ ] Git - Bringing It All Together - 🔲🔲🔲🔲🔲
 
 
 
@@ -82,7 +85,7 @@ git clone [REPO_URL]
 Much like `git init`, `git clone` is typically a one time action used to initially setup a project to manage.
 
 ## Git - Basics: 
-Git has a simplistic working schema for the single user. `add`, `commit`, and `push` compose most the vast majority of actions you will need to perform. For collaborators, other commands exist, such as `merge` and `rebase` to deal with the inevitable conflicts that arise from multiple people working on one file/project. This initial section will cover the workflow under the guise of a single-user on a singular device. Later sections will expand upon this and encompass the scope of the development process.
+Git has a simplistic working schema. `add`, `commit`, and `push` compose most the vast majority of actions you will need to perform. This initial section will cover the workflow under the guise of a single-user. Later sections will expand upon this and encompass the scope of the development process.
 
 ### git add
 By default, Git does not automatically track all files in the directory it supervises. If you want to track the history of a file, you have to add that file. To add a file for Git to track, type the command -
@@ -105,7 +108,7 @@ After adding the files, they are indexed as a set of changes to be made, but hav
 ```
 git commit
 ```
-By default, this command will open the text editor associated with Git and prompt you to supply a commit message. You should always supply a commit message. If you find yourself having to write very verbose commit messages, let that be an indicator that your commits encompass too many changes between them. However, if you wish to skip the step of having to type your message in a text editor, you can type the command -
+By default, this command will open the text editor associated with Git and prompt you to supply a commit message. You should always supply a meaningful commit message. If you find yourself having to write very verbose commit messages, let that be an indicator that your commits encompass too many changes between them. However, if you wish to skip the step of having to type your message in a text editor, you can type the command -
 
 ```
 git commit -m "[MESSAGE_GOES_HERE]"
@@ -113,8 +116,25 @@ git commit -m "[MESSAGE_GOES_HERE]"
 
 This will allow you to commit with a message attached through the terminal without going through the intermediary text editor. For small changes, this is quick and effective.
 
+### git push
+`git push` is used to upload your local repo to a remote repo. For the purposes of this tutorial, that remote repo is GitHub. However, because it is typical to only ever reference remote by a local variable, this method is typically the same, regardless of the chosen remote repo. To "push" the commit history to a remote repo, type the command -
 
-## END #1
+```
+git push [REMOTE_NAME] [BRANCH_NAME]
+```
+
+For the vast majority of use cases, `[REMOTE]` will be `origin`. The only exception is if you want to push changes to multiple repositories, and have manually configured multiple remotes, shown by the command, `git remote`.
+
+
+
+
+
+# END #1
+
+
+
+
+
 
 ### git reset
 
