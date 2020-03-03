@@ -99,13 +99,19 @@ git add .
 
 `git add` works by tracking the state of the file at the time of its addition. That is to say, it only sees what the file looks like up to that point, and no further. Any modifications made to the file after the `git add` command is issued will not be tracked. 
 
-### 1.3.4. git commit
+### git commit
 After adding the files, they are indexed as a set of changes to be made, but haven't yet been "saved". To "save" the current state of the project and generate a referenceable object, you need to commit those changes. To do so, type the command - 
 
-`git commit -m ["MESSAGE_GOES_HERE"]`
+```
+git commit
+```
+By default, this command will open the text editor associated with Git and prompt you to supply a commit message. You should always supply a commit message. If you find yourself having to write very verbose commit messages, let that be an indicator that your commits encompass too many changes between them. However, if you wish to skip the step of having to type your message in a text editor, you can type the command -
 
-Always commit your changes with a descriptive message.
-Once the files are committed, a new version now exists inside the repository.
+```
+git commit -m "[MESSAGE_GOES_HERE]"
+```
+
+This will allow you to commit with a message attached through the terminal without going through the intermediary text editor. For small changes, this is quick and effective.
 
 
 ## END #1
