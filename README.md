@@ -12,8 +12,8 @@
 - [ ] Git - Git Bash Shell - 🔲
 - [X] Git - Global Configurations - ✅✅✅
 - [X] Git - Repository Initialization  - ✅✅
-- [X] Git - Basics: - ✅✅✅
-- [ ] Git - Workflow - Basic Case: 🔲
+- [X] Git - Basics: - ✅✅✅✅
+- [X] Git - Basic Workflow: ✅✅✅
 - [ ] Git - Intermediary - 🔲🔲🔲🔲
 - [ ] Git - Workflow - Intermediary Case: 🔲
 - [ ] Git - Advanced - 🔲🔲🔲🔲🔲
@@ -123,18 +123,56 @@ This will allow you to commit with a message attached through the terminal witho
 git push [REMOTE_NAME] [BRANCH_NAME]
 ```
 
-For the vast majority of use cases, `[REMOTE]` will be `origin`. The only exception is if you want to push changes to multiple repositories, and have manually configured multiple remotes, shown by the command, `git remote`.
+For the vast majority of use cases, `[REMOTE]` will be `origin`. The only exception is if you want to push changes to multiple repositories and have manually configured multiple remotes, shown by the command, `git remote`.
+
+With that sequence of `add`, `commit`, and `push`, the vast majority of your Git workflow is complete.
+
+## Git - Basic Workflow:
+
+### Example #1 - First Time Git Repo: 
+```
+# Make a project directory
+mkdir my_project_directory
+
+# Go to that directory
+cd my_project_directory
+
+# Init the directory as a git repo
+git init
+
+# Create the README.md file
+echo Hello World > README.md
+
+# Stage README.md
+git add README.md
+
+# Commit the changes
+git commit -m "Init Repo & Created README.md"
+```
+
+### Example #2 - Committing Changes To Local & Remote Repos [remote@ origin/master]:
+```
+git add hello_worlds.c
+git commit -m "Changed hello_world.c to hello_worlds.c"
+git push origin master
+
+# ...more changes are made
+
+git add hello_worlds.c
+git commit -m "Added support for multiple worlds to hello_worlds.c"
+git push origin master
+```
+
+### Example #3 - Clone A Repo
+```
+cd my_project_folder
+git clone https://www.github.com/github_user_name/github_repo_name
+```
 
 
 
 
-
-# END #1
-
-
-
-
-
+# PICK UP HERE
 
 ### git reset
 
